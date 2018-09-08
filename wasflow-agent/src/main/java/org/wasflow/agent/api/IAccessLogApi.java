@@ -15,7 +15,7 @@ public interface IAccessLogApi {
     /**
      * 로그 전송 path
      */
-    String ACCESS_LOG_SEND_PATH = "/logs/was";
+    String ACCESS_LOG_SEND_PATH = "/exclude/logs/was";
 
     /**
      * 하나의 수집 로그를 전송하는 메소드

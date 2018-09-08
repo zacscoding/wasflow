@@ -10,7 +10,19 @@ import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Opcodes;
+import org.wasflow.agent.asm.CustomLoginASM;
+import org.wasflow.agent.asm.HttpServiceASM;
 import org.wasflow.agent.asm.IASM;
+import org.wasflow.agent.asm.InitialContextASM;
+import org.wasflow.agent.asm.JDBCConnectionASM;
+import org.wasflow.agent.asm.JDBCDataSourceASM;
+import org.wasflow.agent.asm.JDBCPreparedStatementASM;
+import org.wasflow.agent.asm.JDBCResultSetASM;
+import org.wasflow.agent.asm.JDBCResultSetMetaDataASM;
+import org.wasflow.agent.asm.JDBCStatementASM;
+import org.wasflow.agent.asm.ServletAsyncASM;
+import org.wasflow.agent.asm.ServletOutputStreamASM;
+import org.wasflow.agent.asm.TomcatASM;
 import org.wasflow.agent.asm.WasflowClassWriter;
 import org.wasflow.util.ASMUtil;
 import org.wasflow.util.WriteClassFileUtil;
@@ -31,19 +43,19 @@ public class AgentTransformer implements ClassFileTransformer {
 
     public static void reload() {
         List<IASM> temps = new ArrayList<IASM>();
-//        temps.add(new HttpServiceASM());
-//        temps.add(new InitialContextASM());
-//        temps.add(new JDBCResultSetASM());
-//        temps.add(new JDBCResultSetMetaDataASM());
-//        temps.add(new JDBCPreparedStatementASM());
-//        temps.add(new JDBCStatementASM());
-//        temps.add(new JDBCDataSourceASM());
-//        temps.add(new JDBCConnectionASM());
-//        temps.add(new TomcatASM());
-//        temps.add(new CustomLoginASM());
-//        temps.add(new ServletOutputStreamASM());
+        temps.add(new HttpServiceASM());
+        temps.add(new InitialContextASM());
+        temps.add(new JDBCResultSetASM());
+        temps.add(new JDBCResultSetMetaDataASM());
+        temps.add(new JDBCPreparedStatementASM());
+        temps.add(new JDBCStatementASM());
+        temps.add(new JDBCDataSourceASM());
+        temps.add(new JDBCConnectionASM());
+        temps.add(new TomcatASM());
+        temps.add(new CustomLoginASM());
+        temps.add(new ServletOutputStreamASM());
 
-        // temps.add(new ServletAsyncASM());
+        temps.add(new ServletAsyncASM());
 
         //         temps.add(new JDBCDriverASM());
         /*  TEMP CODE :: 특정 클래스, 메소드를 찾기 위한 */

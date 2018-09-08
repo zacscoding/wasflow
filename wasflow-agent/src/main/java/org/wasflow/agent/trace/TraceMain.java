@@ -93,8 +93,6 @@ public class TraceMain {
                 return;
             }
 
-            System.out.println("@@ TraceMain::endTrace is called..");
-
             if (httpContext.ctx.startedAsync) {
                 // 구현해야 됨
             } else {

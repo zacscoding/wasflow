@@ -163,9 +163,6 @@ public class LOGGER {
      * 로그파일 초기화 Configurer.log_path 디렉터리에 wasflow-yyMMdd.log 파일로 생성 => canWrite()이면 return
      */
     private static synchronized void initLogFile() {
-        //        if (pw == null) {
-        //            pw = new PrintWriter(System.out);
-        //        }
         try {
             Configurer conf = Configurer.getInstance();
             String logPath = conf.log_path;

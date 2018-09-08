@@ -1,11 +1,11 @@
 ```aidl
--javaagent=/usr/local/wasflow/wasflow-agent.jar -Dwasflow.config.path=/usr/local/wasflow/wasflow-config.json
+-javaagent:/usr/local/wasflow/wasflow-agent.jar -Dwasflow.config.path=/usr/local/wasflow/wasflow-config.json
 ```
 
 1. VM 옵션에 Java agent 옵션을 추가
 
 ```aidl
--javaagent=path/wasflow-agent.jar
+-javaagent:path/wasflow-agent.jar
 e.g : -javaagent:C:\Users\go-in\git\wasflow\target\wasflow-agent.jar
 ```
 
